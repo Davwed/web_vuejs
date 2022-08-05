@@ -15,5 +15,17 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-service": "~5.0.0"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davwed/web_vuejs.git"
+  },
+  "author": "Davwed",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/Davwed/web_vuejs/issues"
+  },
+  "homepage": "https://github.com/Davwed/web_vuejs#readme"
 }

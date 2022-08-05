@@ -1,7 +1,8 @@
 <template>
-	<div class="sidebar">
+	<div class="topbar">
 		<Header />
-		<Button title="Show Item Manager" />
+		<Button @btn-click="$router.push('/items')" title="Show Item Manager" />
+		<Button @btn-click="$router.push('/')" title="Go Home" />
 		<Footer />
 	</div>
 </template>
@@ -22,11 +23,13 @@
 </script>
 
 <style scoped>
-	.sidebar {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: left;
+	.topbar {
 		margin: 0px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding-left: 1em;
+		background: lightblue;
 	}
 </style>

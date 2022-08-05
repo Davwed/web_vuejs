@@ -9,8 +9,6 @@
 		name: "Button",
 		props: {
 			title: String,
-			padding: Number,
-			border: Number,
 		},
 		methods: {},
 	}

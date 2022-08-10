@@ -6,7 +6,6 @@
 	export default {
 		name: "Header",
 		props: {
-			size: Number,
 			title: String,
 		},
 	}

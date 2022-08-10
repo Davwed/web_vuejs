@@ -1,24 +1,35 @@
 <template>
-	<p class="title">{{ title }}</p>
-	<p class="description">{{ description }}</p>
+	<div class="footer">
+		<p class="title">{{ title }}</p>
+		<p class="description">{{ text }}</p>
+	</div>
 </template>
 
 <script>
 	export default {
 		name: "Footer",
+
+		props: {
+			title: String,
+			text: String,
+		},
 	}
 </script>
 
 <style scoped>
 	p {
-		display: flex;
-		flex-direction: column;
 		margin: 0;
 	}
 	.title {
-		font-size: 1rem;
+		font-size: 2em;
 	}
 	.description {
-		font-size: 10px;
+		font-size: 1em;
+	}
+	.footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 </style>

@@ -1,6 +1,8 @@
 <template>
-	<Header />
-	<Footer />
+	<div class="body">
+		<Header title="About" />
+		<Footer text="Here be about section" />
+	</div>
 </template>
 
 <script>
@@ -16,8 +18,4 @@
 	}
 </script>
 
-<style scoped>
-	.title {
-		font-size: 2rem;
-	}
-</style>
+<style scoped></style>

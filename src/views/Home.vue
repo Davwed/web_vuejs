@@ -1,5 +1,8 @@
 <template>
-	<Header size="100" title="Welcome to Here" />
+	<div class="body">
+		<Header title="Welcome to Here" />
+		<Footer text="Now get out" title="You have been welcomed" />
+	</div>
 </template>
 
 <script>
@@ -15,8 +18,4 @@
 	}
 </script>
 
-<style scoped>
-	.title {
-		font-size: 2rem;
-	}
-</style>
+<style scoped></style>

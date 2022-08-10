@@ -1,17 +1,17 @@
 <template>
 	<div class="site-container">
-		<Sidebar />
+		<Navbar />
 
 		<router-view />
 	</div>
 </template>
 
 <script>
-	import Sidebar from "./components/Sidebar.vue"
+	import Navbar from "./components/Navbar.vue"
 
 	export default {
 		components: {
-			Sidebar,
+			Navbar,
 		},
 	}
 </script>
@@ -19,5 +19,13 @@
 <style scoped>
 	.site-container {
 		display: flex;
+		flex-direction: column;
+	}
+	.body {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
 	}
 </style>

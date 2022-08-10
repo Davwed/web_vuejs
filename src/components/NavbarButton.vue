@@ -1,12 +1,12 @@
 <template>
-	<button @click="$emit('btn-click')">
+	<button class="navbar-button" @click="$emit('btn-click')">
 		{{ title }}
 	</button>
 </template>
 
 <script>
 	export default {
-		name: "Button",
+		name: "NavbarButton",
 		props: {
 			title: String,
 		},
@@ -18,11 +18,11 @@
 <style scoped>
 	button {
 		color: black;
-		background: lightgray;
+		background: white;
 		box-sizing: content-box;
 	}
 	button:hover {
 		color: white;
-		background: darkgray;
+		background: black;
 	}
 </style>

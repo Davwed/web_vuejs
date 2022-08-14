@@ -1,8 +1,8 @@
 <template>
 	<div class="navbar">
 		<Header title="Title here" />
-		<NavbarButton @btn-click="$router.push('/items')" title="Items" />
 		<NavbarButton @btn-click="$router.push('/')" title="Home" />
+		<NavbarButton @btn-click="$router.push('/manager')" title="Manager" />
 		<NavbarButton @btn-click="$router.push('/about')" title="About" />
 	</div>
 </template>

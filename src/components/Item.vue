@@ -1,6 +1,5 @@
 <template>
 	<p>{{ item.id }}</p>
-	<p>{{ item.name }}</p>
 	<p>{{ item.text }}</p>
 </template>
 
@@ -8,7 +7,10 @@
 	export default {
 		name: "Item",
 		props: {
-			item: Object,
+			item: {
+				id: Number,
+				text: String,
+			},
 		},
 	}
 </script>

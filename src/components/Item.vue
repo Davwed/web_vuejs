@@ -8,7 +8,7 @@
 		name: "Item",
 		props: {
 			item: {
-				id: Number,
+				id: String,
 				text: String,
 			},
 		},

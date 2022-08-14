@@ -1,36 +1,39 @@
 <template>
-	<ItemManager @test-data="testData" :id="item.id" :text="item.text" />
-
-	<div v-for="item in items" :key="item.id">
-		<Item :item="item" />
+	<div class="body">
+		<ItemManager @sendData="addItem($event)" />
+		<Items :items="items" />
 	</div>
 </template>
 
 <script>
-	import Item from "../components/Item.vue"
+	import Items from "../components/Items.vue"
 	import ItemManager from "../components/ItemManager.vue"
 	export default {
 		name: "Manager",
 		components: {
-			Item,
+			Items,
 			ItemManager,
 		},
 		data() {
 			return {
-				items: [
-					{
-						id: 1,
-						text: "number",
-					},
-				],
+				items: [],
 			}
 		},
 		methods: {
-			testData() {
-				console.log(`${item.id}, ${item.text}`)
+			addItem(e) {
+				this.items = [...this.items, e]
+				console.log(`${e.id}, ${e.text}`)
 			},
 		},
 	}
 </script>
 
-<style></style>
+<style>
+	.manager-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border: 5px solid black;
+	}
+</style>

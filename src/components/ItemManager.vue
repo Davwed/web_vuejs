@@ -1,7 +1,9 @@
 <template>
-	<input type="text" v-model="id" />
-	<input type="text" v-model="text" />
-	<Button title="Test" @btn-click="$emit('test-data', id, text)" />
+	<div class="manager-box">
+		<input type="text" placeholder="id" v-model="item.id" />
+		<input type="text" placeholder="text" v-model="item.text" />
+		<Button title="Test" @btn-click="sendData" />
+	</div>
 </template>
 
 <script>
@@ -11,14 +13,25 @@
 		components: {
 			Button,
 		},
-		props: {
-			id: Number,
-			text: String,
+		data() {
+			return {
+				item: {
+					id: String,
+					text: String,
+				},
+			}
 		},
-		methods: {},
-
-		emits: ["test-data"],
+		methods: {
+			sendData() {
+				this.$emit("sendData", this.item)
+			},
+		},
+		emits: ["sendData"],
 	}
 </script>
 
-<style></style>
+<style>
+	.item {
+		border: 2px solid gray;
+	}
+</style>

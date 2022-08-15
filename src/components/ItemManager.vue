@@ -1,8 +1,10 @@
 <template>
 	<div class="manager-box">
-		<input type="text" placeholder="id" v-model="item.id" />
-		<input type="text" placeholder="text" v-model="item.text" />
-		<Button title="Test" @btn-click="sendData" />
+		<Button title="Add Item" @btn-click="addItem" />
+		<input placeholder="Item title" type="text" v-model="title" />
+		<input placeholder="Item text" type="text" v-model="text" />
+		<Button title="Remove Item" @btn-click="sendDel" />
+		<input type="number" v-model="delId" />
 	</div>
 </template>
 
@@ -15,23 +17,56 @@
 		},
 		data() {
 			return {
-				item: {
-					id: String,
-					text: String,
-				},
+				id: Number,
+				title: "",
+				text: "",
+				delId: "",
 			}
 		},
 		methods: {
-			sendData() {
-				this.$emit("sendData", this.item)
+			addItem() {
+				if (this.title === "" || this.text === "") {
+					alert("Please add title and text")
+				} else {
+					this.id = Math.round(Math.random() * 100)
+
+					const newItem = {
+						id: this.id,
+						title: this.title,
+						text: this.text,
+					}
+
+					this.$emit("add-item", newItem)
+				}
+			},
+
+			sendDel() {
+				const deleteId = this.delId
+
+				if (deleteId === "") {
+					alert("Please add an ID to delete")
+				} else {
+					this.$emit("send-del", deleteId)
+
+					console.log(`Hello from ItemManager with ${deleteId}`)
+				}
 			},
 		},
-		emits: ["sendData"],
+		emits: ["add-item", "send-del"],
 	}
 </script>
 
 <style>
-	.item {
+	.manager-box {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		background: lightgray;
 		border: 2px solid gray;
+	}
+	.item {
+		width: 100%;
+		border: 2px solid gray;
+		background: white;
 	}
 </style>

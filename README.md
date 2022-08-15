@@ -1,4 +1,4 @@
-# wuto-vue
+# web-vuejs
 
 ## Project setup
 ```

@@ -1,4 +1,4 @@
-# web_vuejs
+# web-vuejs
 
 ## Project setup
 ```

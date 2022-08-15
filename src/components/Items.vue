@@ -1,6 +1,8 @@
 <template>
-	<div v-for="item in items" :key="item.id">
-		<Item :item="item" />
+	<div class="item">
+		<div v-for="item in items" :key="item.id">
+			<Item :item="item" />
+		</div>
 	</div>
 </template>
 
@@ -17,4 +19,4 @@
 	}
 </script>
 
-<style></style>
+<style scoped></style>

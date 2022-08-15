@@ -1,6 +1,7 @@
 <template>
 	<p>{{ item.id }}</p>
-	<p>{{ item.text }}</p>
+	<p class="id">{{ item.title }}</p>
+	<p class="text">{{ item.text }}</p>
 </template>
 
 <script>
@@ -9,10 +10,19 @@
 		props: {
 			item: {
 				id: Number,
+				title: String,
 				text: String,
 			},
 		},
 	}
 </script>
 
-<style></style>
+<style scoped>
+	.id {
+		font-size: 15px;
+	}
+
+	.text {
+		font-size: 13px;
+	}
+</style>
